@@ -8,7 +8,7 @@ let capturedPhotosCount = 0; // 已拍攝照片數量
 
 // 判斷目前在哪一頁
 const path = window.location.pathname;
-const isLoginPage = path.includes('login.html');
+const isLoginPage = path.includes('index.html');
 const isDashboardPage = path.includes('dashboard.html');
 const isCheckoutPage = path.includes('checkout.html');
 
@@ -246,5 +246,6 @@ function initCheckout() {
 function confirmPayment() {
     alert("付款成功！系統將重置。");
     localStorage.clear(); 
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
+
 }
