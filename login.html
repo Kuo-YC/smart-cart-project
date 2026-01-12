@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員登入 - 智慧購物車</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container login-container">
+        <header>
+            <h1>🛒 會員登入</h1>
+            <p>請輸入資訊並拍攝背部特徵</p>
+        </header>
+
+        <div class="form-group">
+            <label>姓名</label>
+            <input type="text" id="input-name" placeholder="請輸入您的姓名" value="王小明">
+        </div>
+        <div class="form-group">
+            <label>信用卡號</label>
+            <input type="text" id="input-card" placeholder="xxxx-xxxx-xxxx-xxxx" value="1234-5678-9012-3456">
+        </div>
+
+        <hr>
+
+        <div class="camera-section">
+            <h3>📷 拍攝背部特徵 (需拍 3 張)</h3>
+            <p style="font-size: 0.9em; color: #666;">請轉身背對鏡頭，用於自動跟隨功能</p>
+            
+            <video id="camera-preview" autoplay playsinline></video>
+            
+            <div class="camera-controls">
+                <button id="btn-open-camera" class="action-btn" onclick="startCamera()">開啟鏡頭</button>
+                <button id="btn-capture" class="action-btn btn-capture" onclick="capturePhoto()" disabled>拍照 (0/3)</button>
+            </div>
+
+            <div class="photo-gallery" id="photo-gallery">
+                </div>
+            
+            <canvas id="canvas" style="display:none;"></canvas>
+        </div>
+
+        <hr>
+
+        <button id="btn-login" class="checkout-btn" onclick="handleLogin()" disabled>
+            完成，進入購物
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

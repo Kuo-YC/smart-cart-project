@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物中 - 智慧購物車</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🛒 智慧購物車</h1>
+            <p>會員：<span id="user-name" style="font-weight:bold; color:#007bff;">載入中...</span></p>
+        </header>
+
+        <div id="mode-toggle" class="mode-box mode-add" onclick="toggleMode()">
+            <h2 id="mode-text">目前狀態：放入購物車</h2>
+            <p>(點擊此處切換模式)</p>
+        </div>
+
+        <div class="cart-section">
+            <h3>目前清單</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>商品名稱</th>
+                        <th>數量</th>
+                        <th>單價</th>
+                        <th>小計</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-list-body">
+                    <tr>
+                        <td colspan="4" style="text-align:center; color:#888;">尚未放入商品...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer-section">
+            <div class="total-display">總金額: $<span id="total-price">0</span></div>
+            <button class="checkout-btn" onclick="goToCheckout()">前往結帳</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
